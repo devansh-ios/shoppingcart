@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 const Navbar = () => {
-  const amount = useSelector(state=>state.cart.total)
+  const quantity = useSelector(state=>state.cart.quantity)
   return (
     <>
       <nav>
@@ -14,7 +14,7 @@ const Navbar = () => {
             <li>Product</li>
           </NavLink>
           <NavLink to="/cart" style={{textDecoration:'none'}}>
-            <li>Cart :  {amount}</li>
+            <li>Cart :  {quantity}</li>
           </NavLink>
         </ul>
       </nav>

@@ -1,22 +1,25 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
-const url = "https://fakestoreapi.com/products";
+import { createSlice } from "@reduxjs/toolkit";
+import data from "../JSON/data.json";
 
 const initialState = {
-  cartItems: [],
-  total: 0,
+  cartItems: data,
+  cardItem:[],
+  totalPrice: 0,
   quantity: 0,
 };
-
-export const getCartItems = createAsyncThunk("cart/getCartitems", () => {
-  return fetch(url)
-    .then((res) => res.json())
-    .catch((err) => console.log(err));
-});
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
-  reducers: {},
+  reducers: {
+    addTocart(state, action) {
+     return state.cardItem.push(action.payload);
+       
+    },
+    removeFromCart(state, action) {
+      state.cartItems.filter((state) => state.id !== action.payload);
+    },
+  },
 });
+export const cartActions = cartSlice.actions;
 export default cartSlice;

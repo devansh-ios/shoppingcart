@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Montserrat&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --heading:#F86F03;
+  --back:#525FE1;
+  --mon:'Montserrat';
+  --kab:'Kablammo';
+}
+nav{
+  width:100%;
+  padding-top:2rem;
+  
+
+}
+.logo{
+  font-family: var(--kab);
+  font-size:3em;
+  display:inline-block;
+  color:var(--heading);
+text-decoration: underline;
+font-weight: bold;
+}
+.list{
+display:flex;
+width:100%;
+align-items: center;
+justify-content: space-around;
+margin:auto;
+}
+.list li{
+  padding:0.3rem;
+   
+font-size:1.2em;
+color:var(--heading);
+  list-style-type: none;
+font-weight:bold;
+font-family:var(--mon);
+}
+.active{
+border-bottom: 5px  dotted var(--back);
+}
+.list li:hover{
+  cursor:pointer;
+  
+  box-shadow:2px 2px 10px var(--heading);
+  border-radius: 5px;
+}
+.heading {
+  font-weight:bold;
+  font-family:var(--mon);
+  font-size:2.5rem;
+  display: block;
+margin:5rem auto auto 8.5rem;
+color:var(--back);
+
+
 }

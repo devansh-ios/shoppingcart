@@ -12,7 +12,7 @@ const Card = ({image,title,price,id,prod}) => {
     <img src={image} alt={title} />
     <h4>{title}</h4>
     <h4>Rs:- {price}</h4>
-    <button onClick={()=>cartHandler(prod)}> Add to cart</button>
+    <button  className='btn' onClick={()=>cartHandler(prod)}> Add to cart</button>
   </div>
   )
 }

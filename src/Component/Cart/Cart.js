@@ -12,14 +12,16 @@ dispatch(cartActions.removeFromCart(id))
   return (
     <>
     <h4 className='heading'>Cart....</h4>
+ <div className='cart-layout'>
  {product.cartItems.map((prod)=>(
  
-  <div className="cart-item" key={prod.id}>
+  <div className="cart-item-layout" key={prod.id}>
     <img src={prod.image} alt={prod.title} />
     <h4>Rs:- {prod.price}</h4>
-    <button onClick={()=>cartHandlerRemover(prod.id)}> Remove</button>
+    <button className='btn' onClick={()=>cartHandlerRemover(prod.id)}> Remove</button>
   </div>
  )) }
+ </div>
 
 
  

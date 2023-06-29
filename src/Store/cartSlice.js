@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../JSON/data.json";
 
 const initialState = {
-  cartItems: data,
-  cardItem:[],
+  cartItems: [],
   totalPrice: 0,
   quantity: 0,
+  price: 0,
 };
 
 const cartSlice = createSlice({
@@ -13,11 +12,15 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addTocart(state, action) {
-     return state.cardItem.push(action.payload);
-       
+      const item = action.payload;
+      state.cartItems.push(item);
+      state.quantity++;
+      state.totalPrice += item.price;
     },
     removeFromCart(state, action) {
-      state.cartItems.filter((state) => state.id !== action.payload);
+      state.cartItems = state.cartItems.filter(
+        (item) => item.id !== action.payload
+      );
     },
   },
 });

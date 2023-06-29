@@ -17,8 +17,13 @@ dispatch(cartActions.removeFromCart(id))
  
   <div className="cart-item-layout" key={prod.id}>
     <img src={prod.image} alt={prod.title} />
-    <h4>Rs:- {prod.price}</h4>
+   <h4>{prod.title}</h4>
+    <button className='btn'>+</button>
+    <p>{product.quantity}</p>
+    <button className='btn'>-</button>
+    
     <button className='btn' onClick={()=>cartHandlerRemover(prod.id)}> Remove</button>
+
   </div>
  )) }
  </div>

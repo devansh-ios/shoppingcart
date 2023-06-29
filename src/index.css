@@ -112,7 +112,9 @@ flex-direction:column;
 
 }
 .cart-item-layout{
-  border:2px solid var(--back);
+  font-family:var(--mon);
+  border-radius: 20px;
+  background:white;
   display:flex;
   align-items: center;
   width:90%;

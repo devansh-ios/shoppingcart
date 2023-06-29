@@ -6,7 +6,7 @@ import Card from "./Card";
 
 const Product = () => {
  
-
+const [loading,setLoading] = useState(true);
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,8 @@ const Product = () => {
       setProduct(data);
       }
       catch(err){
-        
+setLoading(false)
+
       }
     };
     fetchProduct();
@@ -28,6 +29,9 @@ const Product = () => {
   return (
     <>
       <span className="heading">Products....</span>
+
+
+      {!loading && <p className="error_message"> Failed to fetch the product</p>}
       <div className="product_container">
         {product.map((prod) => (
      <Card key={prod.id} prod={prod} {...prod}/>

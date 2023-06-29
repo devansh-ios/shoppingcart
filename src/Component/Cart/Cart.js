@@ -20,7 +20,7 @@ dispatch(cartActions.removeFromCart(id))
     <button onClick={()=>cartHandlerRemover(prod.id)}> Remove</button>
   </div>
  )) }
-{product.cartItems}
+
 
  
   

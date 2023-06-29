@@ -1,10 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { cartActions } from "../../Store/cartSlice";
+ 
+ 
 import Card from "./Card";
+
 const Product = () => {
-  const dispatch = useDispatch();
+ 
 
   const [product, setProduct] = useState([]);
 

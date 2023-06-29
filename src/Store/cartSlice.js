@@ -15,13 +15,17 @@ const cartSlice = createSlice({
       const item = action.payload;
       state.cartItems.push(item);
       state.quantity++;
-      state.totalPrice += item.price;
+      
     },
     removeFromCart(state, action) {
-      state.cartItems = state.cartItems.filter(
+     return state.cartItems.filter(
         (item) => item.id !== action.payload
       );
     },
+    caltotalPrice(state,action){
+       const item = action.payload
+state.totalPrice+=item.price
+    }
   },
 });
 export const cartActions = cartSlice.actions;

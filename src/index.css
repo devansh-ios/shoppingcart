@@ -99,10 +99,12 @@ margin-bottom: 1rem;
 }
 .error_message{
   font-family:var(--kab);
-  color:var(--heading);
+  color:var(--back);
   text-align: center;
   font-size:3rem ;
-  margin: 5rem auto;
+  margin: 7rem auto;
+  letter-spacing: 5px;
+
 }
 .cart-layout{
 display:flex;
@@ -123,5 +125,13 @@ flex-direction:column;
 }
 .cart-item-layout img{
   width:150px;
+
+}
+.cart-second-container{
+  display:flex;
+  align-items: center;;
+  width:20%;
+  justify-content: space-evenly;
+
 
 }

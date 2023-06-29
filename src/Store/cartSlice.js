@@ -5,7 +5,7 @@ const initialState = {
   totalPrice: 0,
   quantity: 0,
   price: 0,
-  
+  amount: 1,
 };
 
 const cartSlice = createSlice({
@@ -18,9 +18,9 @@ const cartSlice = createSlice({
       state.quantity++;
     },
     removeFromCart(state, action) {
-      const card = action.payload
-state.cartItems= state.cartItems.filter((item) => item.id !== card);
-state.quantity--;
+      const card = action.payload;
+      state.cartItems = state.cartItems.filter((item) => item.id !== card);
+      state.quantity--;
     },
     
   },

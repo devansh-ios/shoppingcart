@@ -11,9 +11,15 @@ const Product = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
+
+      try{
       const res = await fetch("https://fakestoreapi.com/products");
       const data = await res.json();
       setProduct(data);
+      }
+      catch(err){
+        
+      }
     };
     fetchProduct();
   }, []);

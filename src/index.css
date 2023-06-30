@@ -1,137 +1,162 @@
 @import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Montserrat&display=swap");
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
-background-color: whitesmoke;
+  background-color: whitesmoke;
 }
-:root{
-  --heading:#F86F03;
-  --back:#525FE1;
-  --mon:'Montserrat';
-  --kab:'Kablammo';
+:root {
+  --heading: #f86f03;
+  --back: #525fe1;
+  --mon: "Montserrat";
+  --kab: "Kablammo";
 }
-nav{
-  width:100%;
-  padding-top:2rem;
-  
-
+nav {
+  width: 100%;
+  padding-top: 2rem;
 }
-.logo{
+.logo {
   font-family: var(--kab);
-  font-size:3em;
-  display:inline-block;
-  color:var(--heading);
-text-decoration: underline;
-font-weight: bold;
+  font-size: 3em;
+  display: inline-block;
+  color: var(--heading);
+  text-decoration: underline;
+  font-weight: bold;
 }
-.list{
-display:flex;
-width:100%;
-align-items: center;
-justify-content: space-around;
-margin:auto;
+.list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
 }
-.list li{
-  padding:0.3rem;
-   
-font-size:1.2em;
-color:var(--heading);
+.list li {
+  padding: 0.3rem;
+
+  font-size: 1.2em;
+  color: var(--heading);
   list-style-type: none;
-font-weight:bold;
-font-family:var(--mon);
+  font-weight: bold;
+  font-family: var(--mon);
 }
-.active{
-border-bottom: 5px  dotted var(--back);
+.active {
+  border-bottom: 5px dotted var(--back);
 }
-.list li:hover{
-  cursor:pointer;
-  
-  box-shadow:2px 2px 10px var(--heading);
+.list li:hover {
+  cursor: pointer;
+
+  box-shadow: 2px 2px 10px var(--heading);
   border-radius: 5px;
 }
 .heading {
-  font-weight:bold;
-  font-family:var(--mon);
-  font-size:2.5rem;
+  font-weight: bold;
+  font-family: var(--mon);
+  font-size: 2.5rem;
   display: block;
-margin:5rem auto auto 8.5rem;
-color:var(--back);
+  margin: 5rem auto auto 8.5rem;
+  color: var(--back);
 }
-.product_container{
-  display:flex;
+.product_container {
+  display: flex;
   justify-content: space-evenly;
-align-items: center;
-flex-wrap: wrap;
-
+  align-items: center;
+  flex-wrap: wrap;
 }
-.cart-item{
+.cart-item {
   text-align: center;
-  width:30%;
-  background-color:white;
-padding:1.2rem;
-margin:1.2rem;
-border-radius:20px;
+  width: 30%;
+  background-color: white;
+  padding: 1.2rem;
+  margin: 1.2rem;
+  border-radius: 20px;
 }
-.cart-item img{
-  width:120px;
+.cart-item img {
+  width: 120px;
 }
-.cart-item h4{
-font-family:var(--mon);
-color:var(--back);
-margin-bottom: 1rem;
+.cart-item h4 {
+  font-family: var(--mon);
+  color: var(--back);
+  margin-bottom: 1rem;
 }
-.btn{
-  border:none;
-  font-weight:bold;
-  background:var(--back);
-  padding:0.5rem;
-  border-radius:20px;
-  font-family:var(--mon);
-  color:white;
-  
+.btn {
+  border: none;
+  font-weight: bold;
+  background: var(--back);
+  padding: 0.5rem;
+  border-radius: 20px;
+  font-family: var(--mon);
+  color: white;
 }
-.btn:hover{
+.btn:hover {
   cursor: pointer;
-  box-shadow:2px 2px 10px var(--back);
+  box-shadow: 2px 2px 10px var(--back);
 }
-.error_message{
-  font-family:var(--kab);
-  color:var(--back);
+.error_message {
+  font-family: var(--kab);
+  color: var(--back);
   text-align: center;
-  font-size:3rem ;
+  font-size: 3rem;
   margin: 7rem auto;
   letter-spacing: 5px;
-
 }
-.cart-layout{
-display:flex;
-align-items: center;
-justify-content: space-evenly;
-flex-direction:column;
-
-}
-.cart-item-layout{
-  font-family:var(--mon);
-  border-radius: 20px;
-  background:white;
-  display:flex;
+.cart-layout {
+  display: flex;
   align-items: center;
-  width:90%;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.cart-item-layout {
+  font-family: var(--mon);
+  border-radius: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  width: 90%;
   justify-content: space-evenly;
   margin: 2rem auto 4rem auto;
 }
-.cart-item-layout img{
-  width:150px;
-
+.cart-item-layout img {
+  width: 150px;
 }
-.cart-second-container{
-  display:flex;
-  align-items: center;;
-  width:20%;
+.cart-second-container {
+  display: flex;
+  align-items: center;
+  width: 20%;
   justify-content: space-evenly;
+}
 
+.total_price {
+  margin: auto 4rem 6rem auto;
+}
+.total_price button {
+  margin-left: 1rem;
+  font-size: 1.5em;
+}
 
+.tp {
+  font-size: 1.5em;
+  font-family: var(--mon);
+  margin-bottom: 2rem;
+  letter-spacing: 5px;
+}
+.endingContainer {
+  position: absolute;
+  width: 100%;
+  
+  height: auto;
+  background-color: rgb(167, 158, 158, 0.7);
+}
+.ending_message {
+   
+  text-align: center;
+  width: 50%;
+  background: white;
+  padding: 25px;
+  margin: 15rem auto;
+  font-family: var(--kab);
+  font-size: 3em;
+  border-radius: 20px;
+  color: var(--heading);
 }

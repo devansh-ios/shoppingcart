@@ -34,7 +34,6 @@ nav {
 }
 .list li {
   padding: 0.3rem;
-
   font-size: 1.2em;
   color: var(--heading);
   list-style-type: none;
@@ -46,7 +45,6 @@ nav {
 }
 .list li:hover {
   cursor: pointer;
-
   box-shadow: 2px 2px 10px var(--heading);
   border-radius: 5px;
 }
@@ -58,12 +56,14 @@ nav {
   margin: 5rem auto auto 8.5rem;
   color: var(--back);
 }
+
 .product_container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .cart-item {
   text-align: center;
   width: 30%;
@@ -142,14 +142,14 @@ nav {
   letter-spacing: 5px;
 }
 .endingContainer {
-  position: absolute;
+  margin-top:-12rem;
+  position: fixed;
   width: 100%;
-  
   height: auto;
   background-color: rgb(167, 158, 158, 0.7);
 }
+
 .ending_message {
-   
   text-align: center;
   width: 50%;
   background: white;
@@ -159,4 +159,65 @@ nav {
   font-size: 3em;
   border-radius: 20px;
   color: var(--heading);
+}
+@media(max-width:700px){
+  .logo{
+    font-size:2em;
+  }
+.list{
+ display: flex;
+ flex-direction: column;
+
+ }
+ .list li{
+  margin-top:1rem;
+ }
+ .cart-item-layout{
+  display: flex;
+  flex-direction: column;
+ 
+
+ }
+ .cart-item-layout img{
+  height:120px;
+  width:auto;
+
+ }
+ .cart-second-container{
+  text-align:center;
+  display: flex;
+  flex-direction:column;
+  width:100%;
+   
+
+ }
+ .cart-second-container h4{
+  margin-bottom:1rem;
+ }
+ .total_price{
+  width:100%;
+  text-align:center;
+  letter-spacing:0px;
+font-size: 0.8em;
+
+ }
+ .total_price button{
+  font-size:0.9em;
+
+ }
+ .heading{
+  width:fit-content;
+  text-align:center;
+  margin: 2rem auto;
+ }
+ .endingContainer {
+  position:fixed;
+  width: 100%;
+  height: auto;
+  background-color: rgb(167, 158, 158, 0.7);
+ margin-top:-14rem;
+}
+.ending_message{
+  margin-top:5rem;
+}
 }

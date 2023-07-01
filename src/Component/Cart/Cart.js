@@ -46,7 +46,7 @@ const Cart = () => {
             <div className="cart-second-container">
               <h4>INR {prod.price}</h4>
               <button
-                className="btn"
+                className="btn removeBtn"
                 onClick={() => cartHandlerRemover(prod.id)}
               >
                 {" "}

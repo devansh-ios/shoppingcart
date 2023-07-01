@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
       <nav>
         <ul className="list">
-        <span className="logo">Redux Store</span>
+        <span className="logo">Redux Fine Store</span>
 
           <NavLink to="/" style={{textDecoration:'none'}}>
           
